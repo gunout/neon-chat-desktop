@@ -1,0 +1,38 @@
+{
+  "name": "neon-chat-desktop",
+  "version": "1.0.0",
+  "description": "Application Cyberpunk Chat pour Ubuntu",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux",
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "author": "Gleaphe",
+  "license": "MIT",
+  "homepage": "https://github.com/gunout/neon-chat-desktop.git",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+    "appId": "com.example.neonchat",
+    "productName": "NEON-CHAT",
+    "linux": {
+      "target": ["deb"],
+      "icon": "assets/icons",
+      "category": "Network",
+      "maintainer": "Gleaphe",
+      "synopsis": "Application de chat Cyberpunk",
+      "description": "Application de chat stylisée dans le thème Cyberpunk 2077"
+    },
+    "extraResources": [
+      {
+        "from": "public",
+        "to": "public",
+        "filter": ["**/*"]
+      }
+    ]
+  }
+}
